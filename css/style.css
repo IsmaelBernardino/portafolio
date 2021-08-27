@@ -327,7 +327,13 @@ h3{
     font-size: 28px;
 }
 footer{
+    height: 60px;
+    margin-top: -5px;
     font-size: 12px;
+    background: #4cd137;
+    text-align: center;
+    color: #2f3640;
+    font-weight: 600;
 }
 
 @media only screen and (min-width: 750px){
