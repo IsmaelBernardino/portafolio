@@ -11,12 +11,16 @@ body{
     background: #f8f8f8;
     font-family: 'Montserrat', sans-serif;
 }
+/* *------------MENU------------ */
+.menu2{
+    display: none;
+}
 header{
+    width: 100%;
+    height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
-    min-height: 50px;
     position: sticky;
     top: 0;
     background: #f8f8f8;
@@ -24,66 +28,70 @@ header{
 }
 header .logo{
     font-family: Yellowtail,cursive;
-    font-size: 28px;
+    font-size: 18px;
     color: #4cd137;
 }
-header ul li{
-    display: inline;
-}
-header ul li a{
-    text-decoration: none;
-    color: #2a2a2a;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 10px 10px;
-    border-radius: 15px;
-    transition: .2s;
-}
-header ul li a:hover{
-    border: 1px solid #019aab;
-    color: #019aab;
-}
-#icon{
-    cursor: pointer;
-    display: none;
-}
-main{
+header .menu1{
+    position: fixed;
     width: 100%;
-}
-section{
     height: 100vh;
+    background: #2f3640;
+    top: 50px;
+    left: 200%;
+    text-align: center;
+    transition: .8s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-section:first-child{
+header .menu1 li{
+    display: block;
+    margin: 50px 0;
+    list-style: none;
+}
+header .menu1 li a{
+    text-decoration: none;
+    color: #f8f8f8;
+}
+header .menu1.show{
+    left: 0;
+}
+
+/*  *---------------PRIMERA SECCION------------- */
+#s1{
+    height: 95vh;
     background: url(../img/atardecer.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
-#inicio{
+#s1 .fondo{
     width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.45);
+    height: 95vh;
+    background: rgba(0, 0, 0, .4);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.intro{
+.fondo .intro{
+    max-height: 450px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     overflow: hidden;
 }
 .intro img{
-    margin-right:30px;
+    margin-bottom:30px;
     color: #f8f8f8;
-    width: 250px;
+    width: 200px;
     border-radius: 50%;
 }
 .intro .descripcion h2{
     padding: 10px;
     color: #f8f8f8;
     text-align: center;
-    font-size: 28px;
+    font-size: 18px;
     letter-spacing: 5px;
     position: relative;
     animation-name: moverdesc;
@@ -94,7 +102,7 @@ section:first-child{
     padding: 10px;
     color: #4cd137;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 100;
     position: relative;
     animation-name: moverdesc;
@@ -104,7 +112,6 @@ section:first-child{
 @keyframes moverdesc {
     0%{
         transform: translateX(300px);
-        font-size: 8px;
         padding: 15px;
         color: rgba(0, 0, 0, 1);
     }
@@ -115,39 +122,30 @@ section:first-child{
         transform: translateX(0px);
     }
 }
-section:nth-child(2){
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+/* *----------------SEGUNDA SECCION----------------- */
+#s2{
+    height: 100%;
 }
-#habilidades h3{
+#s2 .habilidades{
     text-align: center;
-    margin-bottom: 50px;
-}
-.subcontenedor img{
-    width: 350px;
-    background-size: cover;
-    background-position: center;
-    margin: auto;
-}
-.subcontenedor{
+    padding: 50px 30px;
     display: flex;
-    max-width: 1000px;
-    margin: auto;
-    margin: 0 50px;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
-.contenedorhabilidad{
-    max-width: 650px;
-    margin: auto;
+.habilidades .contenedor img{
+    width: 250px;
+    margin: 30px 0;
+}
+.contenedor .subcontenedor{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.tarjeta .tarjetaimg{
-    width: 100px;
-    height: 100px;
+.subcontenedor .tarjeta .tarjetaimg{
+    width: 80px;
+    height: 80px;
     margin: 10px;
 }
 .tarjeta:first-child > .tarjetaimg{
@@ -179,10 +177,11 @@ section:nth-child(2){
     background-size: contain;
 }
 .tarjeta h4{
-    text-align: center;
     font-family: 'Kaushan Script', cursive;
 }
-section:nth-child(3){
+
+/* *---------------TERCERA SECCION--------------- */
+#s3{
     background: url(../img/home-office.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -190,54 +189,49 @@ section:nth-child(3){
     background-attachment: fixed;
     height: 100%;
 }
-.contenedor-proyecto{
-    margin: 50px 0;
-}
-#proyectos{
+#s3 .proyectos{
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.44);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 30px;
 }
-#proyectos h3{
-    text-align: center;
-}
-.contenedor_tarjeta{
-    max-width: 90%;
+.proyectos .contenedor-tarjeta{
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.tarjeta_proyecto{
-    width: 300px;
-    margin: 10px;
+.contenedor-tarjeta .tarjeta-proyecto{
+    width: 250px;
+    margin: 5px;
     transition: .5s;
 }
-.tarjeta_proyecto:hover{
-    width: 350px;
+.tarjeta-proyecto:hover{
+    width: 300px;
 }
-.tarjeta_proyecto .cover{
+.tarjeta-proyecto .cover{
     width: 100%;
     height: 150px;
     position: relative;
     overflow: hidden;
 }
-.tarjeta_proyecto .cover img{
-    width: 250px;
+.tarjeta-proyecto .cover img{
+    width: 200px;
     display: block;
     margin: auto;
     position: relative;
-    top: 30px;
+    top: 50px;
     z-index: 25;
     filter: drop-shadow(5px 5px 4px rgba(0,0,0,.5));
     transition: .4s;
 }
-.tarjeta_proyecto:hover .cover img{
-    top: 0;
-    width: 300px;
+.tarjeta-proyecto:hover .cover img{
+    top: 20;
+    width: 250px;
 }
 .img_fondo{
     width: 100%;
@@ -249,10 +243,10 @@ section:nth-child(3){
 .img_fondo{
     background: #4cd137;
 }
-.tarjeta_proyecto .des_proyecto{
+.tarjeta-proyecto .des_proyecto{
     background: #f8f8f8;
     margin-top: -10px;
-    padding: 15px 20px;
+    padding: 25px 20px;
 }
 .des_proyecto h4{
     margin-top: 5px;
@@ -274,31 +268,17 @@ section:nth-child(3){
     background: #008796;
     padding: 9px 28px;
 }
-section:nth-child(4){
-    height: 100%;
-}
-#contacto h3{
-    text-align: center;
-}
-.contenedor-contacto{
-    width: 100%;
-    margin: auto;
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.formulario{
-    width: 400px;
+
+/* *-----------------------CUARTA SECCION-------------- */
+#s4 .contacto{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-.formulario .campo-txt{
-    position: relative;
-    border-bottom: 2px solid #4cd137;
-    margin: 10px 0;
-    background: #f0f0f0;
-    border-radius: 10px;
+.contenedor-contacto .formulario{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
 }
 .campo-txt input, .campo-txt textarea{
     width: 100%;
@@ -310,17 +290,22 @@ section:nth-child(4){
     outline: none;
 }
 .campo-txt textarea{
-    min-width: 400px;
-    max-width: 400px;
+    min-width: 300px;
+    max-width: 300px;
     min-height: 80px;
     max-height: 200px;
 }
+.formulario .campo-txt{
+    border-bottom: 2px solid #4cd137;
+    margin: 10px 0;
+    background: #f0f0f0;
+    border-radius: 10px;
+}
 .formulario .btn-contacto{
     border: none;
-    width: 200px;
+    width: 150px;
     padding: 10px;
     margin: auto;
-    margin-top: 10px;
     text-transform: uppercase;
     background: #4cd137;
     border-radius: 10px;
@@ -330,176 +315,190 @@ section:nth-child(4){
     background: #53e73c;
     box-shadow: 0px 3px 5px black;
 }
-.contenedorcontacto img{
-    width: 60px;
-    margin: 20px;
+.redes{
+    display: flex;
+    justify-content: center;
+}
+.redes a img{
+    width: 35px;
+    margin: 20px 10px;
 }
 h3{
-    font-size: 30px;
+    font-size: 28px;
 }
 footer{
-    background: #4cd137;
-    height: 50px;
-    text-align: center;
-    font-weight: 600;
-    color: #2a2a2a;
+    font-size: 12px;
 }
 
-/* RESPONSIVE DE 600px a 800px  */
-@media only screen and (min-width: 600px) and (max-width: 800px){
+@media only screen and (min-width: 750px){
     #icon{
-        display: block;
+        display: none;
     }
-    header ul{
-        position: fixed;
-        width: 90%;
-        height: 100vh;
-        background: #2f3640;
-        top: 50px;
-        left: 200%;
-        text-align: center;
-        transition: .8s ease-in-out;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    header ul li{
-        display: block;
-        margin: 50px 0;
-    }
-    header ul li a{
-        color: #f8f8f8;
-    }
-    header ul.show{
-        left: 0;
-    }
-    .intro{
-        min-height: 525px;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-    }
-    .subcontenedor{
-        height: 100%;
-        margin: 0 50px;
-        display: flex;
-        flex-direction: column;
-    }
-    .subcontenedor img{
-        margin-bottom: 50px;
-    }
-    .contenedor-contacto{
-        margin-top: 30px;
-        display: flex;
-        flex-direction: column;
-    }
-    .contenedor-contacto .formulario{
-        margin-bottom: 30px;
-    }
-}
-
-/* RESPONSIVE MOVIL 300PX A 600PX */
-@media only screen and (min-width: 300px) and (max-width: 600px){
-    #icon{
-        display: block;
-    }
-    header ul{
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background: #2f3640;
-        top: 50px;
-        left: 200%;
-        text-align: center;
-        transition: .8s;
-    }
-    header ul li{
-        display: block;
-        margin: 80px 0;
-    }
-    header ul li a{
-        color: #f8f8f8;
-    }
-    header ul.show{
-        left: 0;
+    header .menu1{
+        display: none;
     }
     header .logo{
-        font-size: 20px;
+        font-size: 26px;
     }
-    .intro{
-        min-height: 450px;
+    header .menu2{
         display: flex;
-        flex-direction: column;
-        overflow: hidden;
     }
-    .intro img{
-        margin: 0;
+    .menu2 .lista{
+        list-style: none;
+        margin: 0 5px;
+    }
+    .lista .link{
+        color: #2f3640;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 5px 10px;
+        transition: .2s;
+        border-radius: 10px;
+    }
+    .link:hover{
+        background: #008796;
         color: #f8f8f8;
-        width: 200px;
-        border-radius: 50%;
+    }
+    .fondo .intro{
+        max-height: 650px;
+    }
+    /* inicio */
+    .intro img{
+        width: 250px;
     }
     .intro .descripcion h2{
-        padding: 10px;
-        color: #f8f8f8;
-        text-align: center;
-        font-size: 18px;
+        font-size: 24px;
         letter-spacing: 5px;
-        position: relative;
-        animation: none;
     }
     .intro .descripcion p{
-        padding: 10px;
-        color: #4cd137;
-        text-align: center;
-        font-size: 16px;
-        font-weight: 100;
-        position: relative;
-        animation: none;
-    }
-    .subcontenedor{
-        margin: 0 20px;
-        display: flex;
-        flex-direction: column;
-    }
-    .subcontenedor img{
-        width: 250px;
-        margin-bottom: 50px;
-    }
-    .contenedorhabilidad{
-        width: 100%;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .tarjeta .tarjetaimg{
-        width: 80px;
-        height: 80px;
-        margin: 5px;
-    }
-    .contenedor-contacto{
-        margin-top: 30px;
-        display: flex;
-        flex-direction: column;
+        font-size: 22px;
     }
     .contenedor-contacto .formulario{
-        margin-bottom: 30px;
+        width: 350px;
     }
-    .wave{
-        height: 100px !important;
+    #s2 .habilidades{
+        height: 80vh;
     }
-    .formulario{
-        width: 300px;
+    .habilidades .contenedor img{
+        width: 350px;
+        margin: 30px 0;
     }
-    .contenedorcontacto img{
-        width: 40px;
+    .subcontenedor .tarjeta .tarjetaimg{
+        width: 80px;
+        height: 80px;
         margin: 10px;
     }
-    h3{
+    /* proyectos */
+    .contenedor-tarjeta .tarjeta-proyecto{
+        width: 280px;
+        margin: 10px;
+    }
+    .tarjeta-proyecto:hover{
+        width: 330px;
+    }
+    .tarjeta-proyecto .cover img{
+        width: 230px;
+        top: 30px;
+    }
+    .tarjeta-proyecto:hover .cover img{
+        top: 0;
+        width: 280px;
+    }
+    .btn_proyecto a{
+        font-size: 18px;
+    }
+    /* contacto */
+    .contenedor-contacto .formulario{
+        width: 350px;
+    }
+    .campo-txt input, .campo-txt textarea{
+        font-size: 18px;
+    }
+    .campo-txt textarea{
+        min-width: 400px;
+        max-width: 400px;
+        max-height: 250px;
+    }
+    .formulario .btn-contacto{
+        width: 200px;
+        padding: 15px;
+    }
+    .redes a img{
+        width: 45px;
+        margin: 20px 10px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    header .logo{
+        font-size: 28px;
+    }
+    .lista .link{
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+    .fondo .intro{
+        max-height: 650px;
+        display: flex;
+        flex-direction: row;
+    }
+    .intro img{
+        margin-right:30px;
+        color: #f8f8f8;
+        width: 250px;
+    }
+    .intro .descripcion h2{
+        font-size: 24px;
+    }
+    .intro .descripcion p{
         font-size: 20px;
     }
-    footer{
-        font-size: 12px;
+    #s2 .habilidades{
+        height: 100vh;
+    }
+    .habilidades .contenedor img{
+        width: 400px;
+        margin: 0px 40px;
+    }
+    .contenedor{
+        display: flex;
+        justify-content: center;
+        margin: 80px 0;
+    }
+    /* proyecto */
+    .contenedor-tarjeta{
+        width: 80%;
+    }
+    .contenedor-tarjeta .tarjeta-proyecto{
+        width: 300px;
+        margin: 10px;
+    }
+    .tarjeta-proyecto:hover{
+        width: 350px;
+    }
+    .tarjeta-proyecto .cover img{
+        width: 250px;
+        top: 30px;
+    }
+    .tarjeta-proyecto:hover .cover img{
+        top: 0;
+        width: 300px;
+    }
+    .btn_proyecto a{
+        font-size: 18px;
+    }
+    /* contacto */
+    .contenedor-contacto{
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .contenedor-contacto .formulario{
+        width: 400px;
+        margin-right: 150px;
+    }
+    .redes a img{
+        width: 60px;
+        margin: 0px 10px;
     }
 }
