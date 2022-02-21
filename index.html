@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdalan Ismael (Portafolio)</title>
+    <link rel="shortcut icon" href="icono/portafolio-profesional.png"> 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalizar.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js""></script>
+    <script>
+        $(document).ready(function(){
+            $('#icon').click(function(){
+                $('ul').toggleClass('show');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-logo"><div class="nombre_logo">Abdalan</div> <span class="nav-logo__span">Ismael</span></div>
+        <div class="menu">
+            <ul class="menu-movil">
+                <a href="#s1" class="menu-movil__item">INICIO</a>
+                <a href="#s2" class="menu-movil__item">HABILIDADES</a>
+                <a href="#s3" class="menu-movil__item">PROYECTOS</a>
+                <a href="#s4" class="menu-movil__item">CONTACTO</a>
+            </ul>
+            <div class="menu-web">
+                <a href="#s1" class="menu-web__item">INICIO</a>
+                <a href="#s2" class="menu-web__item">HABILIDADES</a>
+                <a href="#s3" class="menu-web__item">PROYECTOS</a>
+                <a href="#s4" class="menu-web__item">CONTACTO</a>
+            </div>
+        </div>
+        <label id="icon">
+            <i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-ThreeLineHorizontal"><path d="M5 6h14M5 12h14M5 18h14"/></svg></i>
+        </label>
+        <div class="model">
+            <div class="model__caja">
+                ¡Correo enviado exsitosamente!
+                <button class="model__caja-close">Cerrar</button>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="view" id="s1">
+            <div class="info">
+                <img src="img/foto.jpeg" alt="foto" class="info__img">
+                <div class="info__about">
+                    <p class="info__name">Abdalan Ismael Bernardino Hidalgo</p>
+                    <h1 class="info__carge">Desarrollador Web</h1>
+                    <p class="info__descripcion"></p>
+                </div>
+                <button class="form__submit"><a href="#s4">CONTACTAME</a></button>
+            </div>
+        </div>
+        <div class="view view--fit" id="s2">
+            <p class="titulo">HABILIDADES</p>
+            <div class="flex-container">
+                <div class="flex__item">
+                    <img src="icono/html5.png" alt="" class="flex__img">
+                    <div class="flex__content">HTML</div>
+                </div>
+                <div class="flex__item">
+                    <img src="icono/CSS.png" alt="" class="flex__img">
+                    <div class="flex__content">CSS</div>
+                </div>
+                <div class="flex__item">
+                    <img src="icono/javascript.svg" alt="" class="flex__img">
+                    <div class="flex__content">JAVASCRIPT</div>
+                </div>
+                <div class="flex__item">
+                    <img src="icono/mysql.png" alt="" class="flex__img">
+                    <div class="flex__content">MYSQL</div>
+                </div>
+                <div class="flex__item">
+                    <img src="icono/oracle.png" alt="" class="flex__img">
+                    <div class="flex__content">ORACLE</div>
+                </div>
+                <div class="flex__item">
+                    <img src="icono/php.png" alt="" class="flex__img">
+                    <div class="flex__content">PHP</div>
+                </div>
+                <div class="flex__item">
+                    <img src="icono/taiwind.png" alt="" class="flex__img">
+                    <div class="flex__content">Tailwind</div>
+                </div>
+                <div class="flex__item">
+                    <img src="icono/github.svg" alt="" class="flex__img">
+                    <div class="flex__content">Github</div>
+                </div>
+            </div>
+        </div>
+        <div class="view view--fit" id="s3">
+            <div class="proyect">
+                <p class="titulo">PROYECTOS</p>
+                <div class="proyect-flex">
+
+                    <div class="proyect__card">
+                        <div class="card__flip">
+                            <img src="img/pro1.jpg" alt="proyecto" class="card__img">
+                            <div class="card__info">
+                                <p class="card__title">Formulario de logeo y registro</p>
+                                <p class="card__text">Es un diseño de formulario que gira al querer registrarte o logearte</p>
+                            </div>
+                        </div>
+                        <div class="card__btns">
+                            <a href="https://github.com/IsmaelBernardino/FormularioFlip" target="_blank"><img src="icono/github.svg" alt="" class="card__icon"></a>
+                            <a href="https://IsmaelBernardino.github.io/FormularioFlip/" target="_blank"><img src="icono/view.svg" alt="" class="card__icon"></a>
+                            <img src="icono/ayuda.svg" alt="" class="card__icon card__btn">
+                            <img src="icono/previous.svg" alt="" class="card__icon card__btn--back">
+                        </div>
+                    </div>
+                    
+                    <div class="proyect__card">
+                        <div class="card__flip">
+                            <img src="img/pro2.png" alt="proyecto" class="card__img">
+                            <div class="card__info">
+                                <p class="card__title">Formulario de Login y Register</p>
+                                <p class="card__text">Un diseño de formulario con una animacion interesante para su incio de sesion de una pagina</p>
+                            </div>
+                        </div>
+                        <div class="card__btns">
+                            <a href="https://github.com/IsmaelBernardino/formulario" target="_blank"><img src="icono/github.svg" alt="" class="card__icon"></a>
+                            <a href="https://IsmaelBernardino.github.io/formulario/" target="_blank"><img src="icono/view.svg" alt="" class="card__icon"></a>
+                            <img src="icono/ayuda.svg" alt="" class="card__icon card__btn">
+                            <img src="icono/previous.svg" alt="" class="card__icon card__btn--back">
+                        </div>
+                    </div>
+                    
+                    <div class="proyect__card">
+                        <div class="card__flip">
+                            <img src="img/pro3.png" alt="proyecto" class="card__img">
+                            <div class="card__info">
+                                <p class="card__title">Quiz App</p>
+                                <p class="card__text">Son unas series de preguntas que al acertar sumas puntos que al fina te muestra tu puntuaje</p>
+                            </div>
+                        </div>
+                        <div class="card__btns">
+                            <a href="https://github.com/IsmaelBernardino/Quiz-App" target="_blank"><img src="icono/github.svg" alt="" class="card__icon"></a>
+                            <a href="https://ismaelbernardino.github.io/Quiz-App/" target="_blank"><img src="icono/view.svg" alt="" class="card__icon"></a>
+                            <img src="icono/ayuda.svg" alt="" class="card__icon card__btn">
+                            <img src="icono/previous.svg" alt="" class="card__icon card__btn--back">
+                        </div>
+                    </div>
+                    
+                    <div class="proyect__card">
+                        <div class="card__flip">
+                            <img src="img/pro4.png" alt="proyecto" class="card__img">
+                            <div class="card__info">
+                                <p class="card__title">Contador de Año nuevo</p>
+                                <p class="card__text">Es un contador que muestra los dias, horas, minutos y segundos que falta para el siguente año nuevo.</p>
+                            </div>
+                        </div>
+                        <div class="card__btns">
+                            <a href="https://github.com/IsmaelBernardino/Contador-js" target="_blank"><img src="icono/github.svg" alt="" class="card__icon"></a>
+                            <a href="https://ismaelbernardino.github.io/Contador-js/" target="_blank"><img src="icono/view.svg" alt="" class="card__icon"></a>
+                            <img src="icono/ayuda.svg" alt="" class="card__icon card__btn">
+                            <img src="icono/previous.svg" alt="" class="card__icon card__btn--back">
+                        </div>
+                    </div>
+                    
+                    <div class="proyect__card">
+                        <div class="card__flip">
+                            <img src="img/pro5.png" alt="proyecto" class="card__img">
+                            <div class="card__info">
+                                <p class="card__title">Pagina realizada con el Tailwind</p>
+                                <p class="card__text">Esta pagina pue realizada con tailwind basado de un ejercicio de un canal de youtube.</p>
+                            </div>
+                        </div>
+                        <div class="card__btns">
+                            <a href="https://github.com/IsmaelBernardino/pagina-tailwind" target="_blank"><img src="icono/github.svg" alt="" class="card__icon"></a>
+                            <a href="https://ismaelbernardino.github.io/pagina-tailwind/" target="_blank"><img src="icono/view.svg" alt="" class="card__icon"></a>
+                            <img src="icono/ayuda.svg" alt="" class="card__icon card__btn">
+                            <img src="icono/previous.svg" alt="" class="card__icon card__btn--back">
+                        </div>
+                    </div>
+                    
+                    <div class="proyect__card">
+                        <div class="card__flip">
+                            <img src="img/pro6.png" alt="proyecto" class="card__img">
+                            <div class="card__info">
+                                <p class="card__title">Proyecto de registro con PHP</p>
+                                <p class="card__text">Este es un proyecto de residencia que consta de una base de datos y se hace la conexion con PHP para implementar un CRUD en la pagina.</p>
+                            </div>
+                        </div>
+                        <div class="card__btns">
+                            <a href="https://github.com/IsmaelBernardino/Proyecto_PHP-MYSQL" target="_blank"><img src="icono/github.svg" alt="" class="card__icon"></a>
+                            <img src="icono/ayuda.svg" alt="" class="card__icon card__btn">
+                            <img src="icono/previous.svg" alt="" class="card__icon card__btn--back">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="view view--relative" id="s4">
+            <p class="titulo">CONTACTO</p>
+            <form action="POST" class="formulario">
+                <input id="input_name" class="nombre form__input" type="text" placeholder="Nombre">
+                <input id="input_email" class="email form__input" type="email" placeholder="Correo" >
+                <textarea id="textarea" class="asunto form__input" placeholder="Asunto..." ></textarea>
+                <input type="submit" name="btn-contacto" class="btn-contacto form__submit" value="ENVIAR">
+            </form>
+        </div>
+    </section>
+    
+    <p class="copy">Diseñado por Abdalan Ismael Bernardino Hidalgo. &copy;2021 Todos los derechos recervados</p>
+    <script src="js/flip.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/correo.js"></script>
+</body>
+</html>
