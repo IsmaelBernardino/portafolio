@@ -3,7 +3,7 @@
     key: 1,
     name: 'My movie',
     url: "https://i.postimg.cc/d1PLZPvt/image.png",
-    description: 'This is a counter of days for new year eve.',
+    description: 'This is a movies and series information.',
     git: 'https://github.com/IsmaelBernardino/mymovies',
     gitlink: 'https://my-entertainment.netlify.app/'
   },
